@@ -44,6 +44,15 @@ app.get('/api/health', (req, res) => {
  });
 });
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({
+    status: 'ok',
+    message: 'Cashier-Q API running',
+    health: '/api/health'
+  });
+});
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

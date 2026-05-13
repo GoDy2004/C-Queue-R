@@ -24,7 +24,9 @@
 .welcome { font-size: 26px; font-weight: 800; color: var(--a-text); }
 .sub     { font-size: 14px; color: var(--a-text-muted); margin: 8px 0 28px; }
 
-.roles { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+.roles      { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+.rolesThree { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+@media (max-width: 600px) { .rolesThree { grid-template-columns: 1fr; } }
 
 .roleCard {
   border: 1.5px solid var(--a-border); border-radius: 16px;
@@ -34,12 +36,18 @@
 .roleCard:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
 
 .roleIcon  { width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; }
+.studentIcon { background: #ede9fe; }
 .cashierIcon { background: #dbeafe; }
 .adminIcon   { background: #d1fae5; }
 
 .roleTitle { font-size: 16px; font-weight: 700; color: var(--a-text); }
 .roleDesc  { font-size: 12px; color: var(--a-text-muted); line-height: 1.5; text-align: center; }
 
+.studentBtn {
+  margin-top: 4px; padding: 10px 18px; background: #7c3aed;
+  color: #fff; border: none; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer;
+  width: 100%;
+}
 .cashierBtn {
   margin-top: 4px; padding: 10px 18px; background: var(--a-primary-light);
   color: #fff; border: none; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer;

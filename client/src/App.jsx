@@ -21,6 +21,7 @@ import AdminReservations  from './pages/admin/AdminReservations';
 import AdminTransactions  from './pages/admin/AdminTransactions';
 import AdminVerification  from './pages/admin/AdminVerification';
 import AdminReports       from './pages/admin/AdminReports';
+import AdminSchedule     from './pages/admin/AdminSchedule';
 
 function StudentGuard({ children }) {
   const { studentUser, loading } = useAuth();
@@ -72,6 +73,7 @@ export default function App() {
             <Route path="transactions"   element={<AdminTransactions />} />
             <Route path="verification"   element={<AdminVerification />} />
             <Route path="reports"        element={<AdminReports />} />
+            <Route path="schedules"      element={<AdminSchedule />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/" replace />} />

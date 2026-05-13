@@ -17,7 +17,7 @@ export default function StudentLogin() {
     setError(''); setLoading(true);
     try {
       await studentLogin(form.student_id, form.password);
-      navigate('/');
+      navigate('/student');
     } catch (err) {
       setError(err.response?.data?.error || 'Login failed');
     } finally { setLoading(false); }
@@ -101,7 +101,7 @@ function RegisterForm() {
       const { authAPI } = await import('../../services/api');
       await authAPI.studentRegister(form);
       await studentLogin(form.student_id, form.password);
-      navigate('/');
+      navigate('/student');
     } catch (err) {
       setError(err.response?.data?.error || 'Registration failed');
     } finally { setLoading(false); }

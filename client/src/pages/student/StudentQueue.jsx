@@ -47,7 +47,7 @@ export default function StudentQueue() {
     <div className={styles.page}>
       {/* Header */}
       <div className={styles.header}>
-        <button className={styles.back} onClick={() => navigate('/')}>
+        <button className={styles.back} onClick={() => navigate('/student')}>
           <BackIcon />
         </button>
         <h1>Queue Monitor</h1>

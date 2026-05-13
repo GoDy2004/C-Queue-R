@@ -58,12 +58,12 @@ export default function StudentReserve() {
     } finally { setLoading(false); }
   };
 
-  if (confirmed) return <ConfirmedScreen confirmed={confirmed} form={form} onHome={() => navigate('/')} />;
+  if (confirmed) return <ConfirmedScreen confirmed={confirmed} form={form} onHome={() => navigate('/student')} />;
 
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <button className={styles.back} onClick={() => step > 1 ? setStep(s => s - 1) : navigate('/')}>
+        <button className={styles.back} onClick={() => step > 1 ? setStep(s => s - 1) : navigate('/student')}>
           <BackIcon />
         </button>
         <h1>Reserve Slot</h1>

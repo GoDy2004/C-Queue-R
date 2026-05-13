@@ -3,10 +3,10 @@ import { useAuth } from '../../contexts/AuthContext';
 import styles from './StudentLayout.module.css';
 
 const NAV = [
-  { to: '/',        label: 'Home',    icon: HomeIcon    },
-  { to: '/queue',   label: 'Queue',   icon: QueueIcon   },
-  { to: '/history', label: 'History', icon: HistoryIcon },
-  { to: '/profile', label: 'Profile', icon: ProfileIcon },
+  { to: '/student',          label: 'Home',    icon: HomeIcon    },
+  { to: '/student/queue',    label: 'Queue',   icon: QueueIcon   },
+  { to: '/student/history',  label: 'History', icon: HistoryIcon },
+  { to: '/student/profile',  label: 'Profile', icon: ProfileIcon },
 ];
 
 export default function StudentLayout() {

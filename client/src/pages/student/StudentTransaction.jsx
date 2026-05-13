@@ -125,7 +125,7 @@ export default function StudentTransaction() {
               ))}
             </div>
             <button className={styles.doneBtn} onClick={() => { setView('list'); fetchTx(); }}>View My Transactions</button>
-            <button className={styles.homeBtn} onClick={() => navigate('/')}>Go to Home</button>
+            <button className={styles.homeBtn} onClick={() => navigate('/student')}>Go to Home</button>
           </div>
         </div>
       </div>
@@ -225,7 +225,7 @@ export default function StudentTransaction() {
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <button className={styles.back} onClick={() => navigate('/')}><BackIcon /></button>
+        <button className={styles.back} onClick={() => navigate('/student')}><BackIcon /></button>
         <h1>My Transactions</h1>
         <div />
       </div>

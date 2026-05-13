@@ -59,7 +59,7 @@ export default function StudentHistory() {
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <button className={styles.back} onClick={() => navigate('/')}>
+        <button className={styles.back} onClick={() => navigate('/student')}>
           <BackIcon />
         </button>
         <h1>My Transactions</h1>

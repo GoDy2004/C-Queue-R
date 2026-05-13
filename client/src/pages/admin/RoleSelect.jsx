@@ -3,13 +3,11 @@ import { useAuth } from '../../contexts/AuthContext';
 import styles from './RoleSelect.module.css';
 
 export default function RoleSelect() {
-  const { staffUser } = useAuth();
+  const { staffUser, studentUser } = useAuth();
   const navigate = useNavigate();
 
-  if (staffUser) {
-    navigate('/admin/app');
-    return null;
-  }
+  if (staffUser) { navigate('/admin/app'); return null; }
+  if (studentUser) { navigate('/student'); return null; }
 
   return (
     <div className={styles.page}>
@@ -34,19 +32,18 @@ export default function RoleSelect() {
         <p className={styles.sub}>Please select your role to continue.</p>
 
         <div className={styles.roles}>
-          {/* Cashier */}
-          <div className={styles.roleCard} onClick={() => navigate('/admin/login?role=cashier')}>
-            <div className={styles.roleIcon + ' ' + styles.cashierIcon}>
+          {/* Student */}
+          <div className={styles.roleCard} onClick={() => navigate('/login')}>
+            <div className={styles.roleIcon + ' ' + styles.studentIcon}>
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                <rect x="2" y="7" width="20" height="14" rx="2" stroke="#2563eb" strokeWidth="2"/>
-                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="#2563eb" strokeWidth="2"/>
-                <line x1="12" y1="12" x2="12" y2="16" stroke="#2563eb" strokeWidth="2" strokeLinecap="round"/>
-                <line x1="10" y1="14" x2="14" y2="14" stroke="#2563eb" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M12 3L2 8l10 5 10-5-10-5z" stroke="#7c3aed" strokeWidth="2" strokeLinejoin="round"/>
+                <path d="M6 10.5v5c0 2 2.686 3.5 6 3.5s6-1.5 6-3.5v-5" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="22" y1="8" x2="22" y2="13" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             </div>
-            <h3 className={styles.roleTitle}>Cashier</h3>
-            <p className={styles.roleDesc}>Manage reservations and process payments.</p>
-            <button className={styles.cashierBtn}>Continue as Cashier</button>
+            <h3 className={styles.roleTitle}>Student</h3>
+            <p className={styles.roleDesc}>Reserve a queue slot and track your transaction.</p>
+            <button className={styles.studentBtn}>Continue as Student</button>
           </div>
 
           {/* Admin */}

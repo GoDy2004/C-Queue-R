@@ -48,9 +48,12 @@ export default function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          {/* Home - Role Selection */}
+          <Route path="/" element={<RoleSelect />} />
+
           {/* Student */}
           <Route path="/login" element={<StudentLogin />} />
-          <Route path="/" element={<StudentGuard><StudentLayout /></StudentGuard>}>
+          <Route path="/student" element={<StudentGuard><StudentLayout /></StudentGuard>}>
             <Route index               element={<StudentHome />} />
             <Route path="queue"        element={<StudentQueue />} />
             <Route path="reserve"      element={<StudentReserve />} />

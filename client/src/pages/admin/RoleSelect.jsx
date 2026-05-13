@@ -56,7 +56,7 @@ export default function RoleSelect() {
               </svg>
             </div>
             <h3 className={styles.roleTitle}>Admin</h3>
-            <p className={styles.roleDesc}>Manage system settings, users and reports.</p>
+            <p className={styles.roleDesc}>Manage system reservations,transactions, users and reports.</p>
             <button className={styles.adminBtn}>Continue as Admin</button>
           </div>
         </div>

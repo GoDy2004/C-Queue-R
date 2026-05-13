@@ -81,7 +81,7 @@ export default function StudentLogin() {
         )}
 
         <div className={styles.divider}><span>or</span></div>
-        <Link to="/admin" className={styles.adminLink}>Go to Admin / Cashier Portal →</Link>
+        <Link to="/admin" className={styles.adminLink}>Go back to Role Selection →</Link>
       </div>
     </div>
   );

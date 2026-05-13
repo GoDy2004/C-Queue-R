@@ -5,10 +5,10 @@ import { queueAPI } from '../../services/api';
 import styles from './StudentHome.module.css';
 
 const QUICK_ACTIONS = [
-  { icon: '📅', label: 'Reserve Slot', to: '/reserve' },
-  { icon: '⏱️', label: 'Queue Monitor', to: '/queue' },
-  { icon: '🧾', label: 'Transactions', to: '/transactions' },
-  { icon: '📋', label: 'Request Form', to: '/history' },
+  { icon: '📅', label: 'Reserve Slot', to: '/student/reserve' },
+  { icon: '⏱️', label: 'Queue Monitor', to: '/student/queue' },
+  { icon: '🧾', label: 'Transactions', to: '/student/transactions' },
+  { icon: '📋', label: 'Request Form', to: '/student/history' },
 ];
 
 export default function StudentHome() {
@@ -92,13 +92,13 @@ export default function StudentHome() {
                   <span className={styles.statLabel}>Estimated Wait Time</span>
                 </div>
               </div>
-              <button className={styles.viewBtn} onClick={() => navigate('/queue')}>View Details</button>
+              <button className={styles.viewBtn} onClick={() => navigate('/student/queue')}>View Details</button>
             </div>
           ) : (
             <div className={styles.noQueue}>
               <span className={styles.noQueueIcon}>🎫</span>
               <p>No active reservation</p>
-              <button className={styles.reserveBtn} onClick={() => navigate('/reserve')}>Reserve a Slot</button>
+              <button className={styles.reserveBtn} onClick={() => navigate('/student/reserve')}>Reserve a Slot</button>
             </div>
           )}
         </div>

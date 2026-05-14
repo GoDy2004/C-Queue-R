@@ -43,7 +43,6 @@ export default function RoleSelect() {
             </div>
             <h3 className={styles.roleTitle}>Student</h3>
             <p className={styles.roleDesc}>Reserve a queue slot and track your transaction.</p>
-            <p className={styles.roleDesc}> </p>
             <button className={styles.studentBtn}>Continue as Student</button>
           </div>
 

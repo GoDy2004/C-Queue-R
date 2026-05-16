@@ -5,7 +5,7 @@ import { transactionAPI, verificationAPI, queueAPI } from '../../services/api';
 import styles from './StudentTransaction.module.css';
 
 const SERVICES = ['Tuition Payment','Miscellaneous Fee','Clearance','Receipt Reissuance','Payment Verification','Insurance'];
-const PAYMENT_METHODS = ['Online Banking','GCash','Maya','Bank Transfer','Cash'];
+const PAYMENT_METHODS = ['Cash'];
 
 export default function StudentTransaction() {
   const { studentUser } = useAuth();
